@@ -23,13 +23,13 @@ class card {
 
   async create(data) {
     const { card } = data;
-    if(!card){
+    if (!card) {
       return {
         status: 'error',
         data: {
           message: 'Enter your card details'
         }
-      }
+      };
     }
     const isValidCard = this.validateCard(card);
     if (isValidCard) {
